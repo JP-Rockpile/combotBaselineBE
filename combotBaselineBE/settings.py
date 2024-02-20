@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'combotBaselineBE.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'database-1',  # Use the database name you created in DBeaver
+        'NAME': 'postgres',  # Use the database name you created in DBeaver
         'USER': 'postgres',  # Use the user you created, or 'postgres' if you skipped this step
         'PASSWORD': 'password123',
         'HOST': 'database-1.cdok8yuciiq6.us-east-2.rds.amazonaws.com',  # Or the IP address of your database server
