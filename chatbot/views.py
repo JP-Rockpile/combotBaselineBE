@@ -113,6 +113,7 @@ class ChatAPIView(APIView):
         conversation.save()
         return "Thank you for providing your email!"
 
+
 class InitialMessageAPIView(APIView):
     def get(self, request, *args, **kwargs):
         initial_message_high = {
