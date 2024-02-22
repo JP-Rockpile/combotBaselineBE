@@ -140,7 +140,7 @@ LOGGING = {
         'file': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'filename': 'combotBaselineBE/logging/django_errors.log',
+            'filename': '/home/ubuntu/combotBaselineBE/logging/django_errors.log',
         },
     },
     'loggers': {
