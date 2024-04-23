@@ -133,6 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+#this is a comment check
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
