@@ -147,12 +147,22 @@ LOGGING = {
             'class': 'logging.FileHandler',
             'filename': BASE_DIR / 'logging' / 'django_debug.log',
         },
+        'error_file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'logging' / 'django_errors.log',
+        },
     },
     'loggers': {
         'django': {
-            'handlers': ['console'],
+            'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['console', 'error_file'],
+            'level': 'ERROR',
+            'propagate': False,
         },
     },
 }
