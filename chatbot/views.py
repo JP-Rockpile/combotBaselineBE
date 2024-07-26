@@ -200,8 +200,8 @@ class ChatAPIView(APIView):
         conversation.save()
 
         html_message = mark_safe(
-            "Thank you for providing your email! <br><br> As part of this study, please follow this link to answer a few follow-up questions: "
-            "<a href='https://mylmu.co1.qualtrics.com/jfe/form/SV_bjCEGqlJL9LUFX8' target='_blank' rel='noopener noreferrer'>Survey Link</a>."
+            "Thank you for providing your Prolific ID! <br><br> As part of this study, please follow this link to answer a few follow-up questions: "
+            "<a href='https://mylmu.co1.qualtrics.com/jfe/form/SV_3kjGfxyBTpEL2pE' target='_blank' rel='noopener noreferrer'>Survey Link</a>."
         )
 
         return html_message
@@ -214,8 +214,8 @@ class InitialMessageAPIView(APIView):
                        "service problems you may have encountered in the past few months. This could include issues like " +
                        "a defective product, a delayed package, or a rude employee. My goal is to provide you with the best " +
                        "guidance to resolve your issue. Please start by recounting your bad experiences with as many " +
-                       "details as possible (when, how, and what happened). Remember, I don't work for any specific brand or " +
-                       "company. While I specialize in handling these issues, I am not Alexa or Siri. " +
+                       "details as possible (when, how, and what happened). " +
+                       "While I specialize in handling these issues, I am not Alexa or Siri. " +
                        "Let's work together to resolve your problem!"
         }
 
@@ -224,7 +224,6 @@ class InitialMessageAPIView(APIView):
                        "experienced in the past few months. Examples of issues include defective products, delayed packages, or " +
                        "rude frontline employees. Combot is designed to provide optimal guideance to resolve your issue. " +
                        "Please provide a detailed account of your negative experiences, including when, how, and what occured. " +
-                       "Combot does not represent any specific brand or company, so you can report problems related to any brand or company. " +
                        "Note that Combot specializes in handling product or service issues and is not a general-purpose " +
                        "assistant like Alexa or Siri. Let us proceed to resolve your problem."
         }
@@ -256,15 +255,18 @@ class ClosingMessageAPIView(APIView):
 class NikeInitialMessageAPIView(APIView):
         def get(self, request, *args, **kwargs):
             initial_message_high = {
-                "message": "Hi there! I'm Combot, and it's great to meet you. I'm here to help with any product or " +
-                           "service problems you may have encountered in the past few months. My goal is to make sure you receive " +
-                           "the best guidance from me. Let's work together to resolve your issue!"
+                "message": "Hello there! I'm Combot, your personal assistant, eager to help you with any product or service issues you've experienced recently. Whether it's a defective product, a delayed package, or an unpleasant interaction, I'm here to offer efficient and organized solutions. " +
+                           "I will do my best to ensure that we tackle your concerns together in a friendly and compassionate manner. Please share your experiences in detail, including when, how, and what happened. " +
+                           "Remember, no matter the challenge, I am confident that we can find the best resolution for you. Let's get started on solving your problem!"
             }
 
             initial_message_low = {
-                "message": "The purpose of Combot is to assist with resolution of product/service problems. " +
-                           "If you have experienced any issues in the past few months, Combot is designed to guide you through " +
-                           "finding the optimal solution."
+                "message": "The purpose of Combot is to assist you with any product or service problems you have " +
+                           "experienced in the past few months. Examples of issues include defective products, delayed packages, or " +
+                           "rude frontline employees. Combot is designed to provide optimal guideance to resolve your issue. " +
+                           "Please provide a detailed account of your negative experiences, including when, how, and what occured. " +
+                           "Note that Combot specializes in handling product or service issues and is not a general-purpose " +
+                           "assistant like Alexa or Siri. Let us proceed to resolve your problem."
             }
 
             initial_message = random.choice([initial_message_high, initial_message_low])
@@ -285,8 +287,8 @@ class NikeClosingMessageAPIView(APIView):
     def get(self, request, *args, **kwargs):
         html_message = mark_safe(
             "THANK YOU for sharing your experience with me! I will send you a set of comprehensive "
-            "suggestions via email. "
-            "Please provide your email address below..."
+            "shortly... "
+            "Please provide your Prolific ID below..."
         )
         return Response({"message": html_message})
 
@@ -481,8 +483,8 @@ class NikeAPIView(APIView):
         conversation.save()
 
         html_message = mark_safe(
-            "Thank you for providing your email! <br><br> As part of this study, please follow this link to answer a few follow-up questions: "
-            "<a href='https://mylmu.co1.qualtrics.com/jfe/form/SV_bjCEGqlJL9LUFX8' target='_blank' rel='noopener noreferrer'>Survey Link</a>."
+            "Thank you for providing your Prolific ID! <br><br> As part of this study, please follow this link to answer a few follow-up questions: "
+            "<a href='https://mylmu.co1.qualtrics.com/jfe/form/SV_3kjGfxyBTpEL2pE' target='_blank' rel='noopener noreferrer'>Survey Link</a>."
         )
 
         return html_message
