@@ -719,7 +719,7 @@ class LuluAPIView(APIView):
         conversation.save()
 
         html_message = mark_safe(
-            "Thank you for providing your email! <br><br> As part of this study, please follow this link to answer a few follow-up questions: "
+            "Thank you for providing your Prolific ID! <br><br> As part of this study, please follow this link to answer a few follow-up questions: "
             "<a href='https://mylmu.co1.qualtrics.com/jfe/form/SV_bjCEGqlJL9LUFX8' target='_blank' rel='noopener noreferrer'>Survey Link</a>."
         )
 
